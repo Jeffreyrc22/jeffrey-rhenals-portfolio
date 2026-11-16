@@ -14,7 +14,7 @@ export function Projects() {
         </div>
         <p>
           Comercio electrónico, gestión logística, comunicación institucional
-          y automatización. Distintos problemas, un mismo cuidado por el detalle.
+          y experiencias de acceso. Distintos problemas, un mismo cuidado por el detalle.
         </p>
       </div>
       <div className="project-list">
@@ -89,3 +89,4 @@ export function Projects() {
     </section>
   );
 }
+
