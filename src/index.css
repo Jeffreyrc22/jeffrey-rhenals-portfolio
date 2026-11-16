@@ -1375,3 +1375,62 @@ p {
     font-size: 15px;
   }
 }
+
+/* Shared actions and project case-study dialog */
+.button, .repository-link, .project-detail-trigger, .detail-close {
+  min-height: 48px;
+  border-radius: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .01em;
+  transition: background .2s, color .2s, border-color .2s, box-shadow .2s, transform .2s;
+}
+.repository-link { display: inline-flex; align-items: center; justify-content: center; gap: 14px; padding: 13px 19px; border: 1px solid #b4c4b4; background: #eef2e9; color: #294b37; }
+.repository-link.live-project-link { background: #234c39; color: #fff; border-color: #234c39; box-shadow: 0 4px 10px #16352416; }
+.project-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.project-detail-trigger { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 16px 18px; margin-top: 20px; background: transparent; border: 1px solid #d4ddd0; color: #294b37; text-align: left; }
+.button:active, .repository-link:active, .project-detail-trigger:active, .detail-close:active { transform: scale(.98); }
+.button:disabled { opacity: .65; cursor: wait; transform: none; }
+@media (hover: hover) {
+  .repository-link:hover, .project-detail-trigger:hover { background: #deeadb; border-color: #829c86; box-shadow: 0 5px 16px #294b3712; transform: translateY(-2px); }
+  .repository-link.live-project-link:hover { background: #316448; border-color: #316448; }
+  .detail-close:hover { background: #dce8d9; transform: rotate(6deg); }
+}
+body:has(.project-dialog[open]) { overflow: hidden; }
+.project-dialog { position: fixed; inset: 0; margin: auto; padding: 0; width: min(1040px, calc(100% - 48px)); max-height: calc(100dvh - 64px); border: 1px solid #d9e0d4; border-radius: 28px; background: #f9f9f3; color: #172b20; box-shadow: 0 32px 100px #0005; overflow-y: auto; overscroll-behavior: contain; }
+.project-dialog::backdrop { background: #07130fb3; backdrop-filter: blur(8px); }
+.detail-toolbar { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 16px; background: #f9f9f3f5; border-bottom: 1px solid #d9e0d4; padding: 12px 30px; }
+.detail-toolbar > span { font-size: 10px; letter-spacing: .15em; text-transform: uppercase; }
+.detail-close { display: grid; place-items: center; width: 46px; min-width: 46px; padding: 0; background: #edf1e8; color: #254732; border: 1px solid #d0dacb; font-size: 20px; }
+.detail-intro { padding: 38px 42px 30px; }
+.detail-intro h2 { font-size: clamp(28px, 4vw, 46px); line-height: 1.14; letter-spacing: -.04em; margin: 0 0 16px; }
+.detail-intro > p:not(.eyebrow) { color: #526455; font-size: 16px; }
+.detail-image { margin: 0 42px; border-radius: 18px; overflow: hidden; background: #e8ece3; }
+.detail-image img { width: 100%; max-height: 390px; object-fit: contain; }
+.detail-image figcaption { padding: 10px 18px; font-size: 11px; color: #526455; }
+.detail-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 38px; padding: 36px 42px; }
+.detail-grid h3 { font-size: 21px; margin: 0 0 12px; }
+.detail-grid p, .detail-decisions { font-size: 14px; line-height: 1.85; color: #526455; }
+.detail-grid aside { padding: 24px; background: #edf1e8; border: 1px solid #dbe3d4; border-radius: 20px; }
+.detail-grid .tags { margin-bottom: 28px; }
+.detail-decisions { padding-left: 20px; }
+.detail-decisions li { padding-left: 5px; margin-bottom: 12px; }
+.detail-footer { padding: 20px 42px; border-top: 1px solid #d9e0d4; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.detail-footer > span { font-size: 12px; color: #526455; }
+@media (max-width: 640px) {
+  .project-dialog { width: calc(100% - 20px); max-height: calc(100dvh - 24px); border-radius: 20px; }
+  .detail-toolbar { padding: 10px 16px; }
+  .detail-intro { padding: 26px 20px; }
+  .detail-image { margin: 0 20px; }
+  .detail-grid { grid-template-columns: 1fr; padding: 28px 20px; gap: 20px; }
+  .detail-footer { padding: 18px 20px; flex-direction: column; align-items: stretch; }
+  .project-actions > a { flex: 1 1 auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .button, .repository-link, .project-detail-trigger, .detail-close { transition: none; }
+  .button:hover, .repository-link:hover, .project-detail-trigger:hover, .detail-close:hover { transform: none; }
+}
+.experience-description > p { max-width: 620px; }
+.experience-description .experience-company { margin-bottom: 16px; color: #2c543b; font-weight: 600; }
+.experience-description .tags { margin-top: 18px; }
+.experience-row { align-items: start; }

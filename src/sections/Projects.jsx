@@ -1,3 +1,4 @@
+import { ProjectDetail } from "../components/ProjectDetail";
 import { projects } from "../data/portfolio";
 import { Arrow } from "../components/Arrow";
 export function Projects() {
@@ -65,23 +66,7 @@ export function Projects() {
                   </a>
                 )}
               </div>
-              <details className="case-study">
-                <summary>
-                  Arquitectura y alcance <Arrow diagonal />
-                </summary>
-                <div className="case-content">
-                  <h4>El problema</h4>
-                  <p>{p.challenge}</p>
-                  <h4>Decisiones técnicas</h4>
-                  <ul>
-                    {p.decisions.map((t) => (
-                      <li key={t}>{t}</li>
-                    ))}
-                  </ul>
-                  <h4>Alcance</h4>
-                  <p>{p.scope}</p>
-                </div>
-              </details>
+              <ProjectDetail project={p} />
             </div>
           </article>
         ))}
@@ -89,4 +74,5 @@ export function Projects() {
     </section>
   );
 }
+
 

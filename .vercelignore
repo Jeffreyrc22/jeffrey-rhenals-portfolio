@@ -1,0 +1,8 @@
+.runtime
+.git
+.env
+.env.*
+docs
+scripts
+node_modules
+dist

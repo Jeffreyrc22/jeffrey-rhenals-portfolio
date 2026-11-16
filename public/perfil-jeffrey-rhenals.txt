@@ -1,7 +1,7 @@
 Jeffrey Rhenals — Software Developer · QA Tester
-QA Tester en BCG DMC Private Company, desde octubre, actualmente en el cargo.
+Desarrollador Full-Stack freelance — 2024 a la actualidad. Soluciones web, APIs y automatización con Python y JavaScript.
 Trainee Developer en NEORIS — agosto de 2023 a febrero de 2024.
-Desarrollador de software independiente — trabajo independiente.
+QA Tester en BCG DMC Private Company — 2 meses. Pruebas web, registro de incidencias con Excel y colaboración mediante Discord y Git.
 AURUM Coffee: catálogo, carrito, cuentas, pedidos de demostración e inventario. React, TypeScript, Spring Boot y PostgreSQL. No procesa pagos ni envíos reales.
 LogiCore: operaciones logísticas, documentación privada, inventario, permisos y reportes. Angular, Java, Spring Boot y PostgreSQL.
 Enfoque: aplicaciones web completas, reglas de negocio, validaciones y calidad de software.
@@ -9,3 +9,4 @@ Enfoque: aplicaciones web completas, reglas de negocio, validaciones y calidad d
 
 Contacto: jeffreyrc20@gmail.com
 GitHub: https://github.com/Jeffreyrc22
+
